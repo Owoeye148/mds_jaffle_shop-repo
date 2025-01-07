@@ -1,0 +1,55 @@
+[2025-01-03T11:59:56.874+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync scheduled__2025-01-02T00:00:00+00:00 [queued]>
+[2025-01-03T11:59:56.909+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync scheduled__2025-01-02T00:00:00+00:00 [queued]>
+[2025-01-03T11:59:56.911+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2025-01-03T11:59:56.999+0000] {taskinstance.py:2217} INFO - Executing <Task(AirbyteJobSensor): airbyte_check_sync> on 2025-01-02 00:00:00+00:00
+[2025-01-03T11:59:57.101+0000] {standard_task_runner.py:60} INFO - Started process 126 to run task
+[2025-01-03T11:59:57.126+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'airbyte_check_sync', 'scheduled__2025-01-02T00:00:00+00:00', '--job-id', '126', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmplq9xr5o2']
+[2025-01-03T11:59:57.142+0000] {standard_task_runner.py:88} INFO - Job 126: Subtask airbyte_check_sync
+[2025-01-03T11:59:57.432+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync scheduled__2025-01-02T00:00:00+00:00 [running]> on host a68ea757822e
+[2025-01-03T11:59:58.974+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='airbyte_check_sync' AIRFLOW_CTX_EXECUTION_DATE='2025-01-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-02T00:00:00+00:00'
+[2025-01-03T11:59:59.035+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:00:04.441+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:01:08.192+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:01:14.783+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:02:15.185+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:02:15.994+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:03:16.634+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:03:17.238+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:04:17.881+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:04:19.124+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:05:19.329+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:05:19.505+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:06:19.660+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:06:19.789+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:07:20.160+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:07:20.416+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:08:20.776+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:08:21.894+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:09:22.053+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:09:22.482+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:10:22.798+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:10:24.965+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:11:25.578+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:11:25.929+0000] {airbyte.py:104} INFO - Waiting for job 69 to complete.
+[2025-01-03T12:12:26.368+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-03T12:12:27.142+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 110, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 91, in poke
+    raise AirflowException(message)
+airflow.exceptions.AirflowException: Job failed: 
+<Response [200]>
+[2025-01-03T12:12:27.248+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=postgres_jaffle_to_snowflake, task_id=airbyte_check_sync, execution_date=20250102T000000, start_date=20250103T115956, end_date=20250103T121227
+[2025-01-03T12:12:27.505+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 126 for task airbyte_check_sync (Job failed: 
+<Response [200]>; 126)
+[2025-01-03T12:12:27.727+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-01-03T12:12:28.439+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

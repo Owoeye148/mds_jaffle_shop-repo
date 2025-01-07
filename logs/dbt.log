@@ -1,0 +1,15 @@
+[0m13:09:16.330222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F3D90BE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F401DDB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F401DDD60>]}
+
+
+============================== 13:09:16.338818 | b3b84311-e0d3-49da-ac3d-37933bd812af ==============================
+[0m13:09:16.338818 [info ] [MainThread]: Running with dbt=1.8.8
+[0m13:09:16.340728 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Temitope\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt docs serve', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:09:16.342137 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\airflow\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:09:16.345702 [debug] [MainThread]: Command `dbt docs serve` failed at 13:09:16.345702 after 0.18 seconds
+[0m13:09:16.347022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F3D90BE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F401DDDC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023F401DDD60>]}
+[0m13:09:16.348019 [debug] [MainThread]: Flushing usage events
+[0m13:09:30.090389 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.

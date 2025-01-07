@@ -1,0 +1,1 @@
+[2024-12-29T18:45:46.648+0000] {scheduler_job_runner.py:780} ERROR - Executor reports task instance <TaskInstance: run_dbt_jaffle.stg_items_run manual__2024-12-29T18:45:08.400219+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

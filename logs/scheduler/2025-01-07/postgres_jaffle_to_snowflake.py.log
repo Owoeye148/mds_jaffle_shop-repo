@@ -1,0 +1,84 @@
+[2025-01-07T08:55:58.471+0000] {processor.py:161} INFO - Started process (PID=29481) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:55:58.473+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T08:55:58.483+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:55:58.482+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:55:58.647+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:55:58.646+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:56:02.027+0000] {processor.py:840} INFO - DAG(s) 'postgres_jaffle_to_snowflake' retrieved from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:56:02.241+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.240+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:56:02.250+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.240+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:56:02.326+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.326+0000] {dag.py:3834} INFO - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:56:02.328+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.326+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:56:02.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/postgres_jaffle_to_snowflake.py took 3.961 seconds
+[2025-01-07T08:57:33.199+0000] {processor.py:161} INFO - Started process (PID=29548) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:57:33.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T08:57:33.221+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:33.220+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:57:33.725+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:33.724+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:57:38.998+0000] {processor.py:840} INFO - DAG(s) 'postgres_jaffle_to_snowflake' retrieved from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:57:39.107+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.106+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:57:39.108+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.106+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:57:39.172+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.172+0000] {dag.py:3834} INFO - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:57:39.173+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.172+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:57:39.210+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/postgres_jaffle_to_snowflake.py took 6.156 seconds
+[2025-01-07T08:58:09.555+0000] {processor.py:161} INFO - Started process (PID=29618) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:58:09.557+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T08:58:09.558+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:09.558+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:58:09.624+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:09.624+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:58:10.044+0000] {processor.py:840} INFO - DAG(s) 'postgres_jaffle_to_snowflake' retrieved from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:58:10.163+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:10.162+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:58:10.164+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:10.162+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:58:10.192+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:10.192+0000] {dag.py:3834} INFO - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:58:10.194+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:10.192+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:58:10.226+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/postgres_jaffle_to_snowflake.py took 0.675 seconds
+[2025-01-07T08:58:40.527+0000] {processor.py:161} INFO - Started process (PID=29693) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:58:40.529+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T08:58:40.532+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:40.532+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:58:40.604+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:40.604+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:58:41.033+0000] {processor.py:840} INFO - DAG(s) 'postgres_jaffle_to_snowflake' retrieved from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:58:41.054+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:41.053+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:58:41.054+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:41.053+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:58:41.078+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:41.078+0000] {dag.py:3834} INFO - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:58:41.079+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:41.078+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:58:41.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/postgres_jaffle_to_snowflake.py took 0.582 seconds
+[2025-01-07T08:59:36.781+0000] {processor.py:161} INFO - Started process (PID=29751) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:59:36.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T08:59:36.789+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.789+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:59:37.302+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:37.302+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:59:43.726+0000] {processor.py:840} INFO - DAG(s) 'postgres_jaffle_to_snowflake' retrieved from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T08:59:43.950+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:43.950+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:59:43.999+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:43.950+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:59:44.265+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:44.265+0000] {dag.py:3834} INFO - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:59:44.275+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:44.265+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for postgres_jaffle_to_snowflake to 2025-01-07 00:00:00+00:00, run_after=2025-01-08 00:00:00+00:00
+[2025-01-07T08:59:44.427+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/postgres_jaffle_to_snowflake.py took 7.660 seconds
+[2025-01-07T09:03:09.858+0000] {processor.py:161} INFO - Started process (PID=29825) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T09:03:09.863+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T09:03:09.865+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:03:09.865+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T09:03:13.379+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:03:13.379+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T09:07:41.726+0000] {processor.py:161} INFO - Started process (PID=29910) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T09:07:42.771+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T09:07:42.858+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:07:42.848+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T09:07:44.360+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:07:44.359+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T09:11:16.955+0000] {processor.py:161} INFO - Started process (PID=29958) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T09:11:16.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T09:11:16.973+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:11:16.972+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T09:11:20.043+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:11:20.038+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T11:15:19.181+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T11:15:19.199+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T11:15:19.223+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:19.220+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T11:15:21.492+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:21.490+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T11:15:51.957+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:50.498+0000] {timeout.py:68} ERROR - Process timed out, PID: 164
+[2025-01-07T11:15:52.532+0000] {logging_mixin.py:188} WARNING - [2025-01-07T11:15:50.498+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 164
+[2025-01-07T11:47:18.923+0000] {processor.py:161} INFO - Started process (PID=300) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T11:47:19.066+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T11:47:19.311+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:47:19.241+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T11:48:00.060+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:47:51.580+0000] {timeout.py:68} ERROR - Process timed out, PID: 300
+[2025-01-07T12:25:12.882+0000] {processor.py:161} INFO - Started process (PID=103) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T12:25:12.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T12:25:13.283+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:25:13.282+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T12:25:17.922+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:25:17.920+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T12:30:29.358+0000] {processor.py:161} INFO - Started process (PID=202) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T12:30:29.383+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T12:30:29.732+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:30:29.632+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T12:30:32.208+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:30:32.172+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T12:40:13.645+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T12:40:13.860+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/postgres_jaffle_to_snowflake.py for tasks to queue
+[2025-01-07T12:40:15.945+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:40:15.518+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/postgres_jaffle_to_snowflake.py
+[2025-01-07T12:40:30.910+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:40:30.900+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config

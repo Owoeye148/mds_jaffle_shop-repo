@@ -1,0 +1,26 @@
+[2024-12-30T19:02:09.066+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.trigger_dbt_jaffle scheduled__2024-12-29T00:00:00+00:00 [queued]>
+[2024-12-30T19:02:09.083+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.trigger_dbt_jaffle scheduled__2024-12-29T00:00:00+00:00 [queued]>
+[2024-12-30T19:02:09.084+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-12-30T19:02:09.108+0000] {taskinstance.py:2217} INFO - Executing <Task(TriggerDagRunOperator): trigger_dbt_jaffle> on 2024-12-29 00:00:00+00:00
+[2024-12-30T19:02:09.123+0000] {standard_task_runner.py:60} INFO - Started process 4146 to run task
+[2024-12-30T19:02:09.130+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'trigger_dbt_jaffle', 'scheduled__2024-12-29T00:00:00+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmpnhe035kt']
+[2024-12-30T19:02:09.135+0000] {standard_task_runner.py:88} INFO - Job 114: Subtask trigger_dbt_jaffle
+[2024-12-30T19:02:09.267+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.trigger_dbt_jaffle scheduled__2024-12-29T00:00:00+00:00 [running]> on host a68ea757822e
+[2024-12-30T19:02:09.475+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='trigger_dbt_jaffle' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-29T00:00:00+00:00'
+[2024-12-30T19:02:09.542+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/trigger_dagrun.py", line 165, in execute
+    dag_run = trigger_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api/common/trigger_dag.py", line 125, in trigger_dag
+    triggers = _trigger_dag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/api/common/trigger_dag.py", line 55, in _trigger_dag
+    raise DagNotFound(f"Dag id {dag_id} not found")
+airflow.exceptions.DagNotFound: Dag id run_dbt_jaffle not found
+[2024-12-30T19:02:09.554+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=postgres_jaffle_to_snowflake, task_id=trigger_dbt_jaffle, execution_date=20241229T000000, start_date=20241230T190209, end_date=20241230T190209
+[2024-12-30T19:02:09.580+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 114 for task trigger_dbt_jaffle (Dag id run_dbt_jaffle not found; 4146)
+[2024-12-30T19:02:09.628+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-12-30T19:02:09.661+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

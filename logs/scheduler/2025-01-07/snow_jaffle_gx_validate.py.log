@@ -1,0 +1,54 @@
+[2025-01-07T08:56:30.486+0000] {processor.py:161} INFO - Started process (PID=29527) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:56:30.493+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T08:56:30.535+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:30.534+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:57:51.158+0000] {processor.py:161} INFO - Started process (PID=29598) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:57:51.160+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T08:57:51.161+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:51.161+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:58:00.229+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:00.229+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:58:00.835+0000] {processor.py:840} INFO - DAG(s) 'validate_jaffle_fact_orders_dim_customers' retrieved from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:58:01.010+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:01.010+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:58:01.011+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:01.010+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:58:01.025+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:01.025+0000] {dag.py:3834} INFO - Setting next_dagrun for validate_jaffle_fact_orders_dim_customers to None, run_after=None
+[2025-01-07T08:58:01.026+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:01.025+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for validate_jaffle_fact_orders_dim_customers to None, run_after=None
+[2025-01-07T08:58:01.051+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/snow_jaffle_gx_validate.py took 9.897 seconds
+[2025-01-07T08:58:31.799+0000] {processor.py:161} INFO - Started process (PID=29676) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:58:31.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T08:58:31.803+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:31.802+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:58:47.968+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:47.967+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:58:50.752+0000] {processor.py:840} INFO - DAG(s) 'validate_jaffle_fact_orders_dim_customers' retrieved from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:58:51.085+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:51.084+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2025-01-07T08:58:51.205+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:51.084+0000] {dag.py:3047} INFO - (astronomer-cosmos) - Sync 1 DAGs
+[2025-01-07T08:58:51.375+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:51.374+0000] {dag.py:3834} INFO - Setting next_dagrun for validate_jaffle_fact_orders_dim_customers to None, run_after=None
+[2025-01-07T08:58:51.388+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:51.374+0000] {dag.py:3834} INFO - (astronomer-cosmos) - Setting next_dagrun for validate_jaffle_fact_orders_dim_customers to None, run_after=None
+[2025-01-07T08:58:51.802+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/snow_jaffle_gx_validate.py took 20.025 seconds
+[2025-01-07T08:59:43.472+0000] {processor.py:161} INFO - Started process (PID=29752) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T08:59:43.479+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T08:59:43.487+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:43.487+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:04:06.519+0000] {processor.py:161} INFO - Started process (PID=29839) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:04:06.540+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T09:04:06.556+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:04:06.550+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:07:42.816+0000] {processor.py:161} INFO - Started process (PID=29911) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:07:42.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T09:07:42.969+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:07:42.926+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:12:10.670+0000] {processor.py:161} INFO - Started process (PID=29973) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:12:10.689+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T09:12:11.530+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:12:10.937+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T09:12:45.883+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:12:42.924+0000] {timeout.py:68} ERROR - Process timed out, PID: 29973
+[2025-01-07T11:15:40.406+0000] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T11:15:40.438+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T11:15:40.456+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:40.454+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T11:16:15.007+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:16:14.418+0000] {timeout.py:68} ERROR - Process timed out, PID: 165
+[2025-01-07T11:49:00.592+0000] {processor.py:161} INFO - Started process (PID=301) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T11:49:03.832+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T11:49:08.570+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:49:06.442+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T11:50:02.895+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:49:53.426+0000] {timeout.py:68} ERROR - Process timed out, PID: 301
+[2025-01-07T12:25:33.915+0000] {processor.py:161} INFO - Started process (PID=108) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T12:25:34.133+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T12:25:34.585+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:25:34.561+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T12:26:09.104+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:26:06.432+0000] {timeout.py:68} ERROR - Process timed out, PID: 108
+[2025-01-07T12:30:29.338+0000] {processor.py:161} INFO - Started process (PID=203) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T12:30:29.374+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T12:30:29.730+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:30:29.632+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T12:42:05.954+0000] {processor.py:161} INFO - Started process (PID=277) to work on /opt/airflow/dags/snow_jaffle_gx_validate.py
+[2025-01-07T12:42:06.534+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/snow_jaffle_gx_validate.py for tasks to queue
+[2025-01-07T12:42:07.514+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:42:06.926+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/snow_jaffle_gx_validate.py

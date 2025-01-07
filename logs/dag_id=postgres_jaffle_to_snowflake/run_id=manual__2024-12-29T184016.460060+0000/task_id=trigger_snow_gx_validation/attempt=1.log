@@ -1,0 +1,14 @@
+[2024-12-29T18:45:56.228+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.trigger_snow_gx_validation manual__2024-12-29T18:40:16.460060+00:00 [queued]>
+[2024-12-29T18:45:56.254+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.trigger_snow_gx_validation manual__2024-12-29T18:40:16.460060+00:00 [queued]>
+[2024-12-29T18:45:56.256+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-12-29T18:45:56.290+0000] {taskinstance.py:2217} INFO - Executing <Task(TriggerDagRunOperator): trigger_snow_gx_validation> on 2024-12-29 18:40:16.460060+00:00
+[2024-12-29T18:45:56.306+0000] {standard_task_runner.py:60} INFO - Started process 186 to run task
+[2024-12-29T18:45:56.312+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'trigger_snow_gx_validation', 'manual__2024-12-29T18:40:16.460060+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmp2kmmm783']
+[2024-12-29T18:45:56.321+0000] {standard_task_runner.py:88} INFO - Job 109: Subtask trigger_snow_gx_validation
+[2024-12-29T18:45:56.431+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.trigger_snow_gx_validation manual__2024-12-29T18:40:16.460060+00:00 [running]> on host a68ea757822e
+[2024-12-29T18:45:56.592+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='trigger_snow_gx_validation' AIRFLOW_CTX_EXECUTION_DATE='2024-12-29T18:40:16.460060+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-29T18:40:16.460060+00:00'
+[2024-12-29T18:46:05.573+0000] {serialized_objects.py:1226} ERROR - Operator Link class 'great_expectations_provider.operators.great_expectations.GreatExpectationsDataDocsLink' not registered
+[2024-12-29T18:46:05.579+0000] {serialized_objects.py:1226} ERROR - Operator Link class 'great_expectations_provider.operators.great_expectations.GreatExpectationsDataDocsLink' not registered
+[2024-12-29T18:46:05.690+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=postgres_jaffle_to_snowflake, task_id=trigger_snow_gx_validation, execution_date=20241229T184016, start_date=20241229T184556, end_date=20241229T184605
+[2024-12-29T18:46:05.751+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-12-29T18:46:05.775+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

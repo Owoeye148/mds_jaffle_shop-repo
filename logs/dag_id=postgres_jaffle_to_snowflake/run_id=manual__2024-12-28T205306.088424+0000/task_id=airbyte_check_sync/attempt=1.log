@@ -1,0 +1,58 @@
+[2024-12-28T20:53:31.849+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync manual__2024-12-28T20:53:06.088424+00:00 [queued]>
+[2024-12-28T20:53:31.874+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync manual__2024-12-28T20:53:06.088424+00:00 [queued]>
+[2024-12-28T20:53:31.875+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-12-28T20:53:31.923+0000] {taskinstance.py:2217} INFO - Executing <Task(AirbyteJobSensor): airbyte_check_sync> on 2024-12-28 20:53:06.088424+00:00
+[2024-12-28T20:53:31.946+0000] {standard_task_runner.py:60} INFO - Started process 3450 to run task
+[2024-12-28T20:53:31.980+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'airbyte_check_sync', 'manual__2024-12-28T20:53:06.088424+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmp8g0s3529']
+[2024-12-28T20:53:32.010+0000] {standard_task_runner.py:88} INFO - Job 94: Subtask airbyte_check_sync
+[2024-12-28T20:53:32.146+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync manual__2024-12-28T20:53:06.088424+00:00 [running]> on host a68ea757822e
+[2024-12-28T20:53:32.489+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='airbyte_check_sync' AIRFLOW_CTX_EXECUTION_DATE='2024-12-28T20:53:06.088424+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-28T20:53:06.088424+00:00'
+[2024-12-28T20:53:32.570+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T20:53:32.687+0000] {airbyte.py:104} INFO - Waiting for job 62 to complete.
+[2024-12-28T20:54:33.192+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T20:54:33.343+0000] {airbyte.py:104} INFO - Waiting for job 62 to complete.
+[2024-12-28T21:00:35.350+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T21:00:35.364+0000] {local_task_job_runner.py:211} ERROR - Heartbeat time limit exceeded!
+[2024-12-28T21:00:35.626+0000] {process_utils.py:131} INFO - Sending 15 to group 3450. PIDs of all processes in the group: [3450]
+[2024-12-28T21:00:35.637+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 3450
+[2024-12-28T21:00:35.648+0000] {taskinstance.py:2483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-28T21:00:38.279+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 110, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 83, in poke
+    job = hook.get_job(job_id=self.airbyte_job_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/hooks/airbyte.py", line 161, in get_job
+    return self.run(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 187, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 219, in run_and_check
+    settings = session.merge_environment_settings(
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/sessions.py", line 761, in merge_environment_settings
+    env_proxies = get_environ_proxies(url, no_proxy=no_proxy)
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/utils.py", line 830, in get_environ_proxies
+    if should_bypass_proxies(url, no_proxy=no_proxy):
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/utils.py", line 814, in should_bypass_proxies
+    bypass = proxy_bypass(parsed.hostname)
+  File "/usr/local/lib/python3.10/urllib/request.py", line 2532, in proxy_bypass_environment
+    proxies = getproxies_environment()
+  File "/usr/local/lib/python3.10/urllib/request.py", line 2501, in getproxies_environment
+    for name in os.environ.keys():
+  File "/usr/local/lib/python3.10/_collections_abc.py", line 886, in __iter__
+    yield from self._mapping
+  File "/usr/local/lib/python3.10/os.py", line 700, in __iter__
+    keys = list(self._data)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 2485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2024-12-28T21:00:40.321+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=postgres_jaffle_to_snowflake, task_id=airbyte_check_sync, execution_date=20241228T205306, start_date=20241228T205331, end_date=20241228T210040
+[2024-12-28T21:00:41.230+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 94 for task airbyte_check_sync (Task received SIGTERM signal; 3450)
+[2024-12-28T21:00:41.487+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=3450, status='terminated', exitcode=1, started='20:53:31') (3450) terminated with exit code 1

@@ -1,0 +1,59 @@
+[2024-12-28T13:46:22.180+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync manual__2024-12-28T13:45:43.222024+00:00 [queued]>
+[2024-12-28T13:46:22.215+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync manual__2024-12-28T13:45:43.222024+00:00 [queued]>
+[2024-12-28T13:46:22.219+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-12-28T13:46:22.310+0000] {taskinstance.py:2217} INFO - Executing <Task(AirbyteJobSensor): airbyte_check_sync> on 2024-12-28 13:45:43.222024+00:00
+[2024-12-28T13:46:22.514+0000] {standard_task_runner.py:60} INFO - Started process 596 to run task
+[2024-12-28T13:46:22.546+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'airbyte_check_sync', 'manual__2024-12-28T13:45:43.222024+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmpqp51qsez']
+[2024-12-28T13:46:22.563+0000] {standard_task_runner.py:88} INFO - Job 75: Subtask airbyte_check_sync
+[2024-12-28T13:46:22.941+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.airbyte_check_sync manual__2024-12-28T13:45:43.222024+00:00 [running]> on host a68ea757822e
+[2024-12-28T13:46:32.895+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='airbyte_check_sync' AIRFLOW_CTX_EXECUTION_DATE='2024-12-28T13:45:43.222024+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-28T13:45:43.222024+00:00'
+[2024-12-28T13:46:33.021+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T13:46:33.461+0000] {airbyte.py:104} INFO - Waiting for job 54 to complete.
+[2024-12-28T13:49:31.161+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T13:49:36.078+0000] {airbyte.py:104} INFO - Waiting for job 54 to complete.
+[2024-12-28T13:52:29.680+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T13:52:30.191+0000] {http.py:199} ERROR - HTTP error: Bad Gateway
+[2024-12-28T13:52:30.208+0000] {http.py:200} ERROR - <html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.25.3</center>
+</body>
+</html>
+
+[2024-12-28T13:52:31.170+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 197, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 502 Server Error: Bad Gateway for url: http://host.docker.internal:8001/api/v1/jobs/get
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 110, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/sensors/base.py", line 265, in execute
+    raise e
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/sensors/base.py", line 247, in execute
+    poke_return = self.poke(context)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/sensors/airbyte.py", line 83, in poke
+    job = hook.get_job(job_id=self.airbyte_job_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/hooks/airbyte.py", line 161, in get_job
+    return self.run(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 187, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 238, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 201, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 502:Bad Gateway
+[2024-12-28T13:52:31.454+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=postgres_jaffle_to_snowflake, task_id=airbyte_check_sync, execution_date=20241228T134543, start_date=20241228T134622, end_date=20241228T135231
+[2024-12-28T13:52:31.765+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 75 for task airbyte_check_sync (502:Bad Gateway; 596)
+[2024-12-28T13:52:31.907+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-12-28T13:52:32.794+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

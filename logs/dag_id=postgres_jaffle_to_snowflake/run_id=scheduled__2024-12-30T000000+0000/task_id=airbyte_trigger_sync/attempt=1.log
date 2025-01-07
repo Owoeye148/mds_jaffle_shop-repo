@@ -1,0 +1,14 @@
+[2025-01-02T14:08:35.906+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_trigger_sync scheduled__2024-12-30T00:00:00+00:00 [queued]>
+[2025-01-02T14:08:35.927+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_trigger_sync scheduled__2024-12-30T00:00:00+00:00 [queued]>
+[2025-01-02T14:08:35.928+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2025-01-02T14:08:35.981+0000] {taskinstance.py:2217} INFO - Executing <Task(AirbyteTriggerSyncOperator): airbyte_trigger_sync> on 2024-12-30 00:00:00+00:00
+[2025-01-02T14:08:35.999+0000] {standard_task_runner.py:60} INFO - Started process 81 to run task
+[2025-01-02T14:08:36.007+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'airbyte_trigger_sync', 'scheduled__2024-12-30T00:00:00+00:00', '--job-id', '118', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmpm_dlk55x']
+[2025-01-02T14:08:36.019+0000] {standard_task_runner.py:88} INFO - Job 118: Subtask airbyte_trigger_sync
+[2025-01-02T14:08:36.222+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.airbyte_trigger_sync scheduled__2024-12-30T00:00:00+00:00 [running]> on host a68ea757822e
+[2025-01-02T14:08:36.584+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='airbyte_trigger_sync' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-30T00:00:00+00:00'
+[2025-01-02T14:08:36.630+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2025-01-02T14:09:35.293+0000] {airbyte.py:86} INFO - Job 68 was submitted to Airbyte Server
+[2025-01-02T14:09:36.639+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=postgres_jaffle_to_snowflake, task_id=airbyte_trigger_sync, execution_date=20241230T000000, start_date=20250102T140835, end_date=20250102T140936
+[2025-01-02T14:09:37.225+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-01-02T14:09:37.837+0000] {taskinstance.py:3312} INFO - 1 downstream tasks scheduled from follow-on schedule check

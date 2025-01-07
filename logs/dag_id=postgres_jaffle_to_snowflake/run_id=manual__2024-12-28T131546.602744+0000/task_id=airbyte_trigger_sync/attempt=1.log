@@ -1,0 +1,61 @@
+[2024-12-28T13:16:14.422+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_trigger_sync manual__2024-12-28T13:15:46.602744+00:00 [queued]>
+[2024-12-28T13:16:14.450+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: postgres_jaffle_to_snowflake.airbyte_trigger_sync manual__2024-12-28T13:15:46.602744+00:00 [queued]>
+[2024-12-28T13:16:14.451+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-12-28T13:16:14.494+0000] {taskinstance.py:2217} INFO - Executing <Task(AirbyteTriggerSyncOperator): airbyte_trigger_sync> on 2024-12-28 13:15:46.602744+00:00
+[2024-12-28T13:16:14.524+0000] {standard_task_runner.py:60} INFO - Started process 196 to run task
+[2024-12-28T13:16:14.536+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'postgres_jaffle_to_snowflake', 'airbyte_trigger_sync', 'manual__2024-12-28T13:15:46.602744+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/postgres_jaffle_to_snowflake.py', '--cfg-path', '/tmp/tmpmi25tcyd']
+[2024-12-28T13:16:14.553+0000] {standard_task_runner.py:88} INFO - Job 67: Subtask airbyte_trigger_sync
+[2024-12-28T13:16:14.735+0000] {task_command.py:423} INFO - Running <TaskInstance: postgres_jaffle_to_snowflake.airbyte_trigger_sync manual__2024-12-28T13:15:46.602744+00:00 [running]> on host a68ea757822e
+[2024-12-28T13:16:15.095+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='postgres_jaffle_to_snowflake' AIRFLOW_CTX_TASK_ID='airbyte_trigger_sync' AIRFLOW_CTX_EXECUTION_DATE='2024-12-28T13:15:46.602744+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-28T13:15:46.602744+00:00'
+[2024-12-28T13:16:15.130+0000] {base.py:83} INFO - Using connection ID 'airbyte_conn' for task execution.
+[2024-12-28T13:16:15.206+0000] {http.py:199} ERROR - HTTP error: Unauthorized
+[2024-12-28T13:16:15.210+0000] {http.py:200} ERROR - <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Airbyte - Access Denied</title>
+  </head>
+  <body>
+    <h1>ð Nope.</h1>
+    <h2><code>HTTP Error Code: 401</code></h2>
+
+    <p>
+      This deployment of Airbyte is protected by HTTP Basic Authentication.
+      Please refer to the <a href="https://docs.airbyte.com">Airbyte docs</a> to learn more about:
+      <ul>
+	      <li><a href="https://docs.airbyte.com/quickstart/deploy-airbyte">the default username/password</a></li>
+	      <li><a href="https://docs.airbyte.com/operator-guides/security">securing your Airbyte deployment</a> including turning off or changing the default username/password.</li>
+      </ul>
+    </p>
+  </body>
+</html>
+
+[2024-12-28T13:16:15.237+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 197, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: http://host.docker.internal:8006/api/v1/connections/sync
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/operators/airbyte.py", line 81, in execute
+    job_object = hook.submit_sync_connection(connection_id=self.connection_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/airbyte/hooks/airbyte.py", line 149, in submit_sync_connection
+    return self.run(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 187, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 238, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/http/hooks/http.py", line 201, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 401:Unauthorized
+[2024-12-28T13:16:15.262+0000] {taskinstance.py:1149} INFO - Marking task as FAILED. dag_id=postgres_jaffle_to_snowflake, task_id=airbyte_trigger_sync, execution_date=20241228T131546, start_date=20241228T131614, end_date=20241228T131615
+[2024-12-28T13:16:15.330+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 67 for task airbyte_trigger_sync (401:Unauthorized; 196)
+[2024-12-28T13:16:15.367+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-12-28T13:16:15.433+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

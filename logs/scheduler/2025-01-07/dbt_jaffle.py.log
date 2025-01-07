@@ -1,0 +1,369 @@
+[2025-01-07T08:55:58.184+0000] {processor.py:161} INFO - Started process (PID=29480) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:55:58.186+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T08:55:58.196+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:55:58.188+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:55:58.424+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:55:58.424+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:56:02.014+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.012+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:56:02.016+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.012+0000] {graph.py:235} INFO - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:56:02.017+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.012+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:56:02.028+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.027+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:56:02.029+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.027+0000] {graph.py:245} INFO - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:56:02.030+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.027+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:56:02.040+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.039+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:56:02.041+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.039+0000] {base.py:168} INFO - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:56:02.042+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.039+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:56:02.047+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.047+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpftgoawgy/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:56:02.049+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.047+0000] {config.py:278} INFO - Creating temporary profiles.yml at /tmp/tmpftgoawgy/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+[2025-01-07T08:56:02.049+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.047+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpftgoawgy/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:56:02.051+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.051+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpd0c9o6h1 --profiles-dir /tmp/tmpftgoawgy --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:56:02.052+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.051+0000] {graph.py:74} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpd0c9o6h1 --profiles-dir /tmp/tmpftgoawgy --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:56:02.053+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.051+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpd0c9o6h1 --profiles-dir /tmp/tmpftgoawgy --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:56:02.054+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.053+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:56:02.055+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:02.053+0000] {graph.py:75} INFO - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:56:02.056+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:02.053+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:56:28.590+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:56:28.284+0000] {timeout.py:68} ERROR - Process timed out, PID: 29480
+[2025-01-07T08:56:28.653+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:56:28.284+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 29480
+[2025-01-07T08:57:28.884+0000] {processor.py:161} INFO - Started process (PID=29547) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:57:28.888+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T08:57:28.890+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:28.889+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:57:29.551+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:29.550+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:57:38.994+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:38.993+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:57:38.995+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:38.993+0000] {graph.py:235} INFO - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:57:38.996+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:38.993+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:57:39.017+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.017+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:57:39.019+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.017+0000] {graph.py:245} INFO - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:57:39.022+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.017+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:57:39.034+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.033+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:57:39.037+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.033+0000] {base.py:168} INFO - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:57:39.039+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.033+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:57:39.045+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.044+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpisc0w7lb/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:57:39.045+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.044+0000] {config.py:278} INFO - Creating temporary profiles.yml at /tmp/tmpisc0w7lb/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+[2025-01-07T08:57:39.046+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.044+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpisc0w7lb/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:57:39.047+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.047+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp0fyvlydr --profiles-dir /tmp/tmpisc0w7lb --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:57:39.048+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.047+0000] {graph.py:74} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp0fyvlydr --profiles-dir /tmp/tmpisc0w7lb --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:57:39.049+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.047+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp0fyvlydr --profiles-dir /tmp/tmpisc0w7lb --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:57:39.050+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.049+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:57:39.051+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:39.049+0000] {graph.py:75} INFO - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:57:39.052+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:39.049+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:57:53.468+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:57:53.456+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_jaffle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_jaffle.py", line 20, in <module>
+    my_dbt_dag = DbtDag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/airflow/dag.py", line 25, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/converter.py", line 244, in __init__
+    dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 176, in load
+    self.load_via_dbt_ls()
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 276, in load_via_dbt_ls
+    stdout = run_command(deps_command, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 94, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'deps', '--project-dir', '/tmp/tmp0fyvlydr', '--profiles-dir', '/tmp/tmpisc0w7lb', '--profile', 'dbt_jaffle_shop', '--target', 'DEV'] due to the error:
+08:57:46  Running with dbt=1.7.13
+08:57:53  Encountered an error:
+External connection exception occurred: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0ee66550f0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2025-01-07T08:57:53.469+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:57:53.456+0000] {dagbag.py:350} ERROR - (astronomer-cosmos) - Failed to import: /opt/airflow/dags/dbt_jaffle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_jaffle.py", line 20, in <module>
+    my_dbt_dag = DbtDag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/airflow/dag.py", line 25, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/converter.py", line 244, in __init__
+    dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 176, in load
+    self.load_via_dbt_ls()
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 276, in load_via_dbt_ls
+    stdout = run_command(deps_command, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 94, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'deps', '--project-dir', '/tmp/tmp0fyvlydr', '--profiles-dir', '/tmp/tmpisc0w7lb', '--profile', 'dbt_jaffle_shop', '--target', 'DEV'] due to the error:
+08:57:46  Running with dbt=1.7.13
+08:57:53  Encountered an error:
+External connection exception occurred: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0ee66550f0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2025-01-07T08:57:53.470+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:57:53.504+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_jaffle.py took 24.591 seconds
+[2025-01-07T08:58:23.760+0000] {processor.py:161} INFO - Started process (PID=29664) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:58:23.761+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T08:58:23.763+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:23.763+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:58:23.856+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:23.856+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:58:24.195+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.194+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:58:24.195+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:24.194+0000] {graph.py:235} INFO - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:58:24.196+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.194+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:58:24.202+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.202+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:58:24.203+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:24.202+0000] {graph.py:245} INFO - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:58:24.204+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.202+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:58:24.211+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.211+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:58:24.212+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:24.211+0000] {base.py:168} INFO - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:58:24.212+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.211+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:58:24.215+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.215+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpje9zy9sp/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:58:24.215+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:24.215+0000] {config.py:278} INFO - Creating temporary profiles.yml at /tmp/tmpje9zy9sp/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+[2025-01-07T08:58:24.216+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.215+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpje9zy9sp/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:58:24.217+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.217+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpzv__x8og --profiles-dir /tmp/tmpje9zy9sp --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:58:24.218+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:24.217+0000] {graph.py:74} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpzv__x8og --profiles-dir /tmp/tmpje9zy9sp --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:58:24.219+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.217+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmpzv__x8og --profiles-dir /tmp/tmpje9zy9sp --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:58:24.220+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.219+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:58:24.221+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:24.219+0000] {graph.py:75} INFO - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:58:24.221+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:24.219+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:58:34.212+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:58:34.201+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/dbt_jaffle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_jaffle.py", line 20, in <module>
+    my_dbt_dag = DbtDag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/airflow/dag.py", line 25, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/converter.py", line 244, in __init__
+    dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 176, in load
+    self.load_via_dbt_ls()
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 276, in load_via_dbt_ls
+    stdout = run_command(deps_command, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 94, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'deps', '--project-dir', '/tmp/tmpzv__x8og', '--profiles-dir', '/tmp/tmpje9zy9sp', '--profile', 'dbt_jaffle_shop', '--target', 'DEV'] due to the error:
+08:58:28  Running with dbt=1.7.13
+08:58:33  Encountered an error:
+External connection exception occurred: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa9de7c10c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2025-01-07T08:58:34.213+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:58:34.201+0000] {dagbag.py:350} ERROR - (astronomer-cosmos) - Failed to import: /opt/airflow/dags/dbt_jaffle.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/dbt_jaffle.py", line 20, in <module>
+    my_dbt_dag = DbtDag(
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/airflow/dag.py", line 25, in __init__
+    DbtToAirflowConverter.__init__(self, *args, **specific_kwargs(**kwargs))
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/converter.py", line 244, in __init__
+    dbt_graph.load(method=render_config.load_method, execution_mode=execution_config.execution_mode)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 176, in load
+    self.load_via_dbt_ls()
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 276, in load_via_dbt_ls
+    stdout = run_command(deps_command, tmpdir_path, env)
+  File "/home/airflow/.local/lib/python3.10/site-packages/cosmos/dbt/graph.py", line 94, in run_command
+    raise CosmosLoadDbtException(f"Unable to run {command} due to the error:\n{details}")
+cosmos.dbt.graph.CosmosLoadDbtException: Unable to run ['/home/airflow/.local/bin/dbt', 'deps', '--project-dir', '/tmp/tmpzv__x8og', '--profiles-dir', '/tmp/tmpje9zy9sp', '--profile', 'dbt_jaffle_shop', '--target', 'DEV'] due to the error:
+08:58:28  Running with dbt=1.7.13
+08:58:33  Encountered an error:
+External connection exception occurred: HTTPSConnectionPool(host='hub.getdbt.com', port=443): Max retries exceeded with url: /api/v1/index.json (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fa9de7c10c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2025-01-07T08:58:34.214+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:58:34.243+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dbt_jaffle.py took 10.490 seconds
+[2025-01-07T08:59:06.667+0000] {processor.py:161} INFO - Started process (PID=29742) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:59:06.670+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T08:59:06.680+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:06.679+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T08:59:07.499+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:07.499+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T08:59:36.239+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.233+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:59:36.241+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.233+0000] {graph.py:235} INFO - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:59:36.250+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.233+0000] {graph.py:235} INFO - (astronomer-cosmos) - Trying to parse the dbt project in `/opt/airflow/dbt/dbt_jaffle_shop` using dbt ls...
+[2025-01-07T08:59:36.272+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.271+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:59:36.273+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.271+0000] {graph.py:245} INFO - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:59:36.274+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.271+0000] {graph.py:245} INFO - (astronomer-cosmos) - Content of the dbt project dir /opt/airflow/dbt/dbt_jaffle_shop: `['.gitignore', 'analyses', 'dbt_packages', 'dbt_project.yml', 'logs', 'macros', 'models', 'package-lock.yml', 'packages.yml', 'README.md', 'seeds', 'snapshots', 'target', 'tests']`
+[2025-01-07T08:59:36.291+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.290+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:59:36.292+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.290+0000] {base.py:168} INFO - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:59:36.294+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.290+0000] {base.py:168} INFO - (astronomer-cosmos) - Using mock values for profile dbt_jaffle_shop
+[2025-01-07T08:59:36.302+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.301+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpry1hd97q/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:59:36.304+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.301+0000] {config.py:278} INFO - Creating temporary profiles.yml at /tmp/tmpry1hd97q/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+[2025-01-07T08:59:36.312+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.301+0000] {config.py:278} INFO - (astronomer-cosmos) - Creating temporary profiles.yml at /tmp/tmpry1hd97q/profiles.yml with the following contents:
+dbt_jaffle_shop:
+    outputs:
+        DEV:
+            account: mock_value
+            database: MDS_PROD
+            password: mock_value
+            schema: CORE
+            type: snowflake
+            user: mock_value
+            warehouse: mock_value
+    target: DEV
+
+[2025-01-07T08:59:36.316+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.316+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp5nqf2k5t --profiles-dir /tmp/tmpry1hd97q --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:59:36.317+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.316+0000] {graph.py:74} INFO - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp5nqf2k5t --profiles-dir /tmp/tmpry1hd97q --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:59:36.319+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.316+0000] {graph.py:74} INFO - (astronomer-cosmos) - Running command: `/home/airflow/.local/bin/dbt deps --project-dir /tmp/tmp5nqf2k5t --profiles-dir /tmp/tmpry1hd97q --profile dbt_jaffle_shop --target DEV`
+[2025-01-07T08:59:36.320+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.319+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:59:36.322+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.319+0000] {graph.py:75} INFO - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:59:36.323+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.319+0000] {graph.py:75} INFO - (astronomer-cosmos) - Environment variable keys: dict_keys(['AIRFLOW__CELERY__RESULT_BACKEND', 'DUMB_INIT_SETSID', 'HOSTNAME', 'PYTHON_VERSION', 'LANGUAGE', 'AIRFLOW_USER_HOME_DIR', 'ADDITIONAL_RUNTIME_APT_DEPS', 'PWD', 'AIRFLOW__CELERY__BROKER_URL', 'AIRFLOW_VERSION', 'wsl_ip', 'AIRFLOW__CORE__LOAD_EXAMPLES', 'AIRFLOW__API__AUTH_BACKENDS', 'INSTALL_MSSQL_CLIENT', 'PYTHON_SETUPTOOLS_VERSION', 'INSTALL_MYSQL_CLIENT_TYPE', 'GUNICORN_CMD_ARGS', 'LD_PRELOAD', 'HOME', 'LANG', 'AIRFLOW_HOME', 'GPG_KEY', 'AIRFLOW__DATABASE__SQL_ALCHEMY_CONN', 'AIRFLOW__CORE__EXECUTOR', 'COMMIT_SHA', 'AIRFLOW_PIP_VERSION', 'AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION', 'ADDITIONAL_RUNTIME_APT_COMMAND', '_PIP_ADDITIONAL_REQUIREMENTS', 'INSTALL_POSTGRES_CLIENT', 'SHLVL', 'LC_MESSAGES', 'RUNTIME_APT_DEPS', 'PYTHON_PIP_VERSION', 'RUNTIME_APT_COMMAND', 'CONSTRAINT_URL', 'LD_LIBRARY_PATH', 'LC_CTYPE', 'AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK', 'PYTHON_GET_PIP_SHA256', 'AIRFLOW_INSTALLATION_METHOD', 'LC_ALL', 'PYTHON_GET_PIP_URL', 'INSTALL_MYSQL_CLIENT', 'PATH', 'PYTHON_BASE_IMAGE', 'AIRFLOW_UID', 'BUILD_ID', 'AIRFLOW__CORE__FERNET_KEY', 'DEBIAN_FRONTEND', 'AIRFLOW__LOGGING__COLORED_CONSOLE_LOG', 'DBT_LOG_PATH', 'DBT_TARGET_PATH'])
+[2025-01-07T08:59:36.526+0000] {logging_mixin.py:188} INFO - [2025-01-07T08:59:36.526+0000] {timeout.py:68} ERROR - Process timed out, PID: 29742
+[2025-01-07T08:59:36.531+0000] {logging_mixin.py:188} WARNING - [2025-01-07T08:59:36.526+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 29742
+[2025-01-07T09:03:09.773+0000] {processor.py:161} INFO - Started process (PID=29824) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:03:09.788+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T09:03:09.791+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:03:09.791+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:03:13.379+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:03:13.379+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T09:07:06.764+0000] {processor.py:161} INFO - Started process (PID=29908) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:07:06.794+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T09:07:06.802+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:07:06.800+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:07:29.204+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:07:26.047+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T09:07:38.456+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:07:38.324+0000] {timeout.py:68} ERROR - Process timed out, PID: 29908
+[2025-01-07T09:07:38.502+0000] {logging_mixin.py:188} WARNING - [2025-01-07T09:07:38.324+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 29908
+[2025-01-07T09:11:16.517+0000] {processor.py:161} INFO - Started process (PID=29957) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:11:16.582+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T09:11:16.626+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:11:16.617+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:11:20.044+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:11:20.041+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T09:35:52.931+0000] {processor.py:161} INFO - Started process (PID=30070) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:35:53.675+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T09:35:53.965+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:35:53.932+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T09:36:25.636+0000] {logging_mixin.py:188} INFO - [2025-01-07T09:36:24.996+0000] {timeout.py:68} ERROR - Process timed out, PID: 30070
+[2025-01-07T11:15:06.178+0000] {processor.py:161} INFO - Started process (PID=156) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T11:15:06.190+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T11:15:06.257+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:06.248+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T11:15:13.663+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:13.643+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T11:15:39.493+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:15:39.352+0000] {timeout.py:68} ERROR - Process timed out, PID: 156
+[2025-01-07T11:15:39.506+0000] {logging_mixin.py:188} WARNING - [2025-01-07T11:15:39.352+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 156
+[2025-01-07T11:47:18.964+0000] {processor.py:161} INFO - Started process (PID=299) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T11:47:19.066+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T11:47:19.314+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:47:19.240+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T11:48:00.052+0000] {logging_mixin.py:188} INFO - [2025-01-07T11:47:51.226+0000] {timeout.py:68} ERROR - Process timed out, PID: 299
+[2025-01-07T12:24:58.839+0000] {processor.py:161} INFO - Started process (PID=100) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T12:24:58.848+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T12:24:58.987+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:24:58.930+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T12:25:13.990+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:25:13.987+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T12:25:30.431+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:25:29.695+0000] {timeout.py:68} ERROR - Process timed out, PID: 100
+[2025-01-07T12:25:30.493+0000] {logging_mixin.py:188} WARNING - [2025-01-07T12:25:29.695+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 100
+[2025-01-07T12:29:50.011+0000] {processor.py:161} INFO - Started process (PID=193) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T12:29:50.149+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T12:29:50.532+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:29:50.491+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T12:30:02.151+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:30:02.149+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T12:30:21.302+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:30:21.121+0000] {timeout.py:68} ERROR - Process timed out, PID: 193
+[2025-01-07T12:30:21.364+0000] {logging_mixin.py:188} WARNING - [2025-01-07T12:30:21.121+0000] {timeout.py:68} ERROR - (astronomer-cosmos) - Process timed out, PID: 193
+[2025-01-07T12:40:13.639+0000] {processor.py:161} INFO - Started process (PID=269) to work on /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T12:40:13.859+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dbt_jaffle.py for tasks to queue
+[2025-01-07T12:40:15.929+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:40:15.525+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/dbt_jaffle.py
+[2025-01-07T12:40:30.920+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:40:30.850+0000] {configuration.py:1046} WARNING - section/key [openlineage/namespace] not found in config
+[2025-01-07T12:41:38.594+0000] {logging_mixin.py:188} INFO - [2025-01-07T12:40:51.462+0000] {timeout.py:68} ERROR - Process timed out, PID: 269
